@@ -1,0 +1,46 @@
+{
+  "name": "msg-channel-shake",
+  "version": "0.0.1",
+  "description": "Web MessageChannel API Wrapper",
+  "type": "module",
+  "exports": {
+    "./initiators": {
+      "import": "./dist/initiators/index.mjs",
+      "types": "./dist/initiators/index.dts",
+      "require": "./dist/initiators/index.cjs"
+    },
+    "./receivers": {
+      "import": "./dist/receivers/index.mjs",
+      "types": "./dist/receivers/index.dts",
+      "require": "./dist/receivers/index.cjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "unbuild": {
+    "failOnWarn": false
+  },
+  "scripts": {
+    "test": "test",
+    "build": "unbuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dh94/msg-channel-shake.git"
+  },
+  "keywords": [
+    "MessageChannel"
+  ],
+  "author": "dh94 - daniel jakobsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dh94/msg-channel-shake/issues"
+  },
+  "homepage": "https://github.com/dh94/msg-channel-shake#readme",
+  "devDependencies": {
+    "typescript": "^5.1.6",
+    "unbuild": "^2.0.0"
+  }
+}
