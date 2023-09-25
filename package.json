@@ -1,6 +1,6 @@
 {
   "name": "msg-channel-shake",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Web MessageChannel API Wrapper",
   "type": "module",
   "exports": {
@@ -13,6 +13,16 @@
       "import": "./dist/receivers/index.mjs",
       "types": "./dist/receivers/index.dts",
       "require": "./dist/receivers/index.cjs"
+    },
+    "./react/initiators": {
+      "import": "./dist/react/initiators/index.mjs",
+      "types": "./dist/react/initiators/index.dts",
+      "require": "./dist/react/initiators/index.cjs"
+    },
+    "./react/receivers": {
+      "import": "./dist/react/receivers/index.mjs",
+      "types": "./dist/react/receivers/index.dts",
+      "require": "./dist/react/receivers/index.cjs"
     }
   },
   "types": "./dist/index.d.ts",
@@ -39,8 +49,21 @@
     "url": "https://github.com/dh94/msg-channel-shake/issues"
   },
   "homepage": "https://github.com/dh94/msg-channel-shake#readme",
+  "peerDependencies": {
+    "react": "^18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
   "devDependencies": {
+    "@types/react": "^18.2.22",
+    "react": "^18.2.0",
     "typescript": "^5.1.6",
     "unbuild": "^2.0.0"
+  },
+  "dependencies": {
+    "msg-channel-shake": "^0.0.1"
   }
 }

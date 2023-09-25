@@ -1,10 +1,18 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@types/react': ^18.2.22
+  msg-channel-shake: ^0.0.1
+  react: ^18.2.0
   typescript: ^5.1.6
   unbuild: ^2.0.0
 
+dependencies:
+  msg-channel-shake: 0.0.1
+
 devDependencies:
+  '@types/react': 18.2.22
+  react: 18.2.0
   typescript: 5.1.6
   unbuild: 2.0.0_typescript@5.1.6
 
@@ -756,8 +764,24 @@ packages:
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
     dev: true
 
+  /@types/prop-types/15.7.7:
+    resolution: {integrity: sha512-FbtmBWCcSa2J4zL781Zf1p5YUBXQomPEcep9QZCfRfQgTxz3pJWiDFLebohZ9fFntX5ibzOkSsrJ0TEew8cAog==}
+    dev: true
+
+  /@types/react/18.2.22:
+    resolution: {integrity: sha512-60fLTOLqzarLED2O3UQImc/lsNRgG0jE/a1mPW9KjMemY0LMITWEsbS4VvZ4p6rorEHd5YKxxmMKSDK505GHpA==}
+    dependencies:
+      '@types/prop-types': 15.7.7
+      '@types/scheduler': 0.16.3
+      csstype: 3.1.2
+    dev: true
+
   /@types/resolve/1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
+    dev: true
+
+  /@types/scheduler/0.16.3:
+    resolution: {integrity: sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==}
     dev: true
 
   /acorn/8.10.0:
@@ -851,6 +875,10 @@ packages:
 
   /convert-source-map/1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
+    dev: true
+
+  /csstype/3.1.2:
+    resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
     dev: true
 
   /debug/4.3.4:
@@ -1156,6 +1184,13 @@ packages:
       graceful-fs: 4.2.11
     dev: true
 
+  /loose-envify/1.4.0:
+    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
+    hasBin: true
+    dependencies:
+      js-tokens: 4.0.0
+    dev: true
+
   /lru-cache/5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
     dependencies:
@@ -1238,6 +1273,10 @@ packages:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
 
+  /msg-channel-shake/0.0.1:
+    resolution: {integrity: sha512-Yb8X4mGCIM8r3VZGZGzh8Xp9CXzicnVc1XYnj9EdC27WhsnNu2E3Vsdx6Fss4UgdXmbnMLgNzAR3XpwAr42auw==}
+    dev: false
+
   /node-releases/2.0.13:
     resolution: {integrity: sha512-uYr7J37ae/ORWdZeQ1xxMJe3NtdmqMC/JZK+geofDrkLUApKRHPd18/TxtBOJ4A0/+uUIliorNrfYV6s1b02eQ==}
     dev: true
@@ -1285,6 +1324,13 @@ packages:
 
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
+    dev: true
+
+  /react/18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
     dev: true
 
   /resolve/1.22.4:
