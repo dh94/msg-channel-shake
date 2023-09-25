@@ -1,6 +1,6 @@
 {
   "name": "msg-channel-shake",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Web MessageChannel API Wrapper",
   "type": "module",
   "exports": {

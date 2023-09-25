@@ -1,14 +1,13 @@
-import { PropsWithChildren, useEffect, useState } from "react";
+import React, { PropsWithChildren, useEffect } from "react";
+import {
+  MessageChannelReceiverOptions,
+  WindowMessageChannelReceiver,
+} from "../../receivers";
 import {
   MsgChannelShakeProvider,
   useAddPortMessenger,
   useRemovePortMessenger,
 } from "../provider";
-import {
-  MessageChannelReceiverOptions,
-  WindowMessageChannelReceiver,
-} from "../../receivers";
-import { PortMessenger } from "../../port-messenger";
 
 const Receiver = ({
   channelId,
