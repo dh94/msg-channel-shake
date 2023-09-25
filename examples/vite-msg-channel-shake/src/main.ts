@@ -3,7 +3,7 @@ import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 import { EventsFromIframe, EventsFromMain, channelId } from "./config.ts";
 import { setupCounter } from "./counter.ts";
-import { IframeMessageChannelInitiator } from "../../../src/initiators";
+import { IframeMessageChannelInitiator } from "msg-channel-shake/initiators";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>

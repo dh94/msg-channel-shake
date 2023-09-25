@@ -1,6 +1,6 @@
 import "./style.css";
 import { setupCounter } from "./counter.ts";
-import { WindowMessageChannelReceiver } from "../../../src/receivers";
+import { WindowMessageChannelReceiver } from "msg-channel-shake/receivers";
 import { EventsFromIframe, EventsFromMain, channelId } from "./config.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
