@@ -1,8 +1,8 @@
 import {
   HANDSHAKE_MESSAGE_REPLY_TYPE,
   HANDSHAKE_MESSAGE_TYPE,
-} from "../events";
-import { MessengerOptions, PortMessenger } from "../port-messenger";
+} from "../core/events";
+import { MessengerOptions, PortMessenger } from "../core/port-messenger";
 
 export interface MessageChannelInitiatorOptions extends MessengerOptions {
   channelId: string;

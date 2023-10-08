@@ -1,9 +1,14 @@
 {
   "name": "msg-channel-shake",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Web MessageChannel API Wrapper",
   "type": "module",
   "exports": {
+    "./core": {
+      "import": "./dist/core/index.mjs",
+      "types": "./dist/core/index.dts",
+      "require": "./dist/core/index.cjs"
+    },
     "./initiators": {
       "import": "./dist/initiators/index.mjs",
       "types": "./dist/initiators/index.dts",

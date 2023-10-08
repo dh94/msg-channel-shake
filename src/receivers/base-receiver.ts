@@ -1,9 +1,9 @@
-import { HandshakeError } from "../errors";
+import { HandshakeError } from "../core/errors";
 import {
   HANDSHAKE_MESSAGE_REPLY_TYPE,
   HANDSHAKE_MESSAGE_TYPE,
-} from "../events";
-import { MessengerOptions, PortMessenger } from "../port-messenger";
+} from "../core/events";
+import { MessengerOptions, PortMessenger } from "../core/port-messenger";
 
 const AWAIT_CALLBACK_CHANNEL_TIMEOUT = 10_000;
 

@@ -5,7 +5,7 @@ import React, {
   useContext,
   useState,
 } from "react";
-import { PortMessenger } from "../port-messenger";
+import { PortMessenger } from "../core/port-messenger";
 
 const msgChannelShakeContext = createContext<{
   channelByPortMessenger: Record<string, PortMessenger>;

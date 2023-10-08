@@ -1,11 +1,9 @@
-import { MessageTimeoutError } from "./errors";
+import { createPromisedChannel } from "./channel-promise-wrapper";
 import {
   InternalMessagePayload,
   MessagePayload,
   ResponseMessagePayload,
 } from "./message-types";
-
-export const MESSAGE_RESPONSE_TIMEOUT = 30_000;
 
 export interface MessengerOptions {
   messageCallback?: (payload: MessagePayload) => Promise<unknown>;
@@ -41,31 +39,14 @@ export class PortMessenger {
 
   public sendMessage<T = unknown>(
     message: MessagePayload,
-    timeout = MESSAGE_RESPONSE_TIMEOUT
+    timeout?: number
   ): Promise<T> {
-    const messageChannel = new MessageChannel();
+    const [portToForward, promise] = createPromisedChannel<T>(timeout);
 
-    return new Promise((resolve, reject) => {
-      const timeoutId = setTimeout(() => {
-        reject(new MessageTimeoutError(message.type, timeout));
-      }, timeout);
-
-      messageChannel.port1.addEventListener("message", (event) => {
-        clearTimeout(timeoutId);
-        const { response, error } = event.data ?? {};
-        if (error) {
-          reject(response);
-        } else {
-          resolve(response);
-        }
-        messageChannel.port1.close();
-      });
-      messageChannel.port1.start();
-
-      this.port!.postMessage(message satisfies InternalMessagePayload, [
-        messageChannel.port2,
-      ]);
-    });
+    this.port!.postMessage(message satisfies InternalMessagePayload, [
+      portToForward,
+    ]);
+    return promise;
   }
 
   public sendAsyncMessage(message: MessagePayload) {
